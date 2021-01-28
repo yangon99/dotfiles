@@ -1,0 +1,16 @@
+{
+    "comment":"For usage, see https://github.com/springzfx/cgproxy",
+
+    "port": 7893,
+    "program_noproxy": ["v2ray", "qv2ray", "clash"],
+    "program_proxy": [],
+    "cgroup_noproxy": ["/system.slice/v2ray.service", "/user.slice/user-1001.slice/user@1001.service/app.slice/clash-yangon.service"],
+    "cgroup_proxy": [],
+    "enable_gateway": false,
+    "enable_dns": false,
+    "enable_udp": false,
+    "enable_tcp": true,
+    "enable_ipv4": true,
+    "enable_ipv6": false,
+    "table": 100,
+    "fwmark": 39283}
