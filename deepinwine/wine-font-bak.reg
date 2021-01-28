@@ -1,0 +1,14 @@
+Windows Registry Editor Version 5.00
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\FontLink\SystemLink]
+"Arial"="NotoSansCJK-Medium.ttc"
+"Arial Black"="NotoSansCJK-Medium.ttc"
+"Arial Unicode MS"="NotoSansCJK-Medium.ttc"
+"Lucida Sans Unicode"="NotoSansCJK-Medium.ttc"
+"Microsoft Sans Serif"="NotoSansCJK-Medium.ttc"
+"Microsoft YaHei"="SIMSUN.TTC,SimSunMINGLIU.TTC,PMingLiuMSGOTHIC.TTC,MS UI GothicBATANG.TTC,Batang"
+"SimSun"="NotoSansCJK-Medium.ttc"
+"Tahoma"="SIMSUN.TTC,SimSunMINGLIU.TTC,PMingLiuMSGOTHIC.TTC,MS UI GothicBATANG.TTC,Batang"
+"Tahoma Bold"="NotoSansCJK-Medium.ttc"
+
+[HKEY_CURRENT_USER\Software\Wine\X11 Driver]
+"ClientSideWithRender"="N"

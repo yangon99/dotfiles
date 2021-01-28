@@ -1,0 +1,5 @@
+import subprocess
+
+config.THEME = 'auto'
+
+subprocess.Popen(['osdlyrics'])

@@ -1,0 +1,85 @@
+[__config__]
+oldver = "old_ver.json"
+newver = "new_ver.json"
+
+[clash-premium-bin]
+source = "cmd"
+cmd = '''curl -s \
+		-H "Accept: application/vnd.github.v3+json" \
+		https://api.github.com/repos/Dreamacro/clash/releases/tags/premium \
+		|grep -E "Premium .{10}"|awk  -F"Premium |\"" '{print $5}' '''
+
+[deepin-wine-qq]
+source = "aur"
+aur = "deepin-wine-qq"
+
+[deepin-wine-wechat]
+source = "aur"
+aur = "deepin-wine-wechat"
+
+[deepin-wine5]
+source = "aur"
+aur = "deepin-wine5"
+
+[flipclock]
+source = "aur"
+aur = "flipclock"
+
+[floserss-bot]
+source = "github"
+github = "indes/flowerss-bot"
+use_latest_release = "true"
+
+[interbench]
+source = "aur"
+aur = "interbench"
+
+[java11-jetbrains-imfix]
+source = "aur"
+aur = "jre11-jetbrains-imfix"
+
+[kcm-colorful-git]
+source = "github"
+github = "IsoaSFlus/kcm-colorful"
+branch = "master"
+
+[mpv-mpris]
+source = "aur"
+aur = "mpv-mpris"
+
+[plasma5-applets-window-buttons-git]
+source = "github"
+github = "psifidotos/applet-window-buttons"
+branch = "master"
+
+[tlpui-git]
+source = "github"
+github = "d4nj1/TLPUI"
+
+[unixbench]
+source = "aur"
+aur = "unixbench"
+
+[utools]
+source = "aur"
+aur = "utools"
+
+[ventoy-bin]
+source = "aur"
+aur = "ventoy-bin"
+
+[wps-office]
+source = "aur"
+aur = "wps-office"
+
+[plasma5-applets-window-appmenu-git]
+source = "github"
+github = "psifidotos/applet-window-appmenu"
+
+[plasma5-applets-window-title-git]
+source = "github"
+github = "psifidotos/applet-window-title"
+
+[bullet-train-oh-my-zsh-theme-git]
+source = "github"
+github = "caiogondim/bullet-train.zsh"

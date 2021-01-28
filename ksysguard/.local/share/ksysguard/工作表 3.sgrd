@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet locked="0" columns="1" interval="0.5" title="硬盘" rows="3">
+ <host name="localhost" shell="" command="ksysguardd" port="-1"/>
+ <display autoRange="1" rowSpan="1" title="硬盘 8:16" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="0" showUnit="0" labels="1" hScale="6" unit="">
+  <beam sensorName="disk/sdb_(8:16)/Rate/rblk" hostName="localhost" sensorType="float" color="0xff0057ae"/>
+  <beam sensorName="disk/sdb_(8:16)/Rate/wblk" hostName="localhost" sensorType="float" color="0xffe20800"/>
+  <beam sensorName="disk/sdb_(8:16)/Delta/rtim" hostName="localhost" sensorType="integer" color="0xfff3c300"/>
+  <beam sensorName="disk/sdb_(8:16)/Delta/wtim" hostName="localhost" sensorType="integer" color="0xffff0000"/>
+ </display>
+ <display autoRange="1" rowSpan="1" title="硬盘 8:0" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="1" showUnit="0" labels="1" hScale="6" unit="">
+  <beam sensorName="disk/sda_(8:0)/Rate/rblk" hostName="localhost" sensorType="float" color="0xff0057ae"/>
+  <beam sensorName="disk/sda_(8:0)/Rate/wblk" hostName="localhost" sensorType="float" color="0xffe20800"/>
+  <beam sensorName="disk/sda_(8:0)/Delta/rtim" hostName="localhost" sensorType="integer" color="0xfff3c300"/>
+  <beam sensorName="disk/sda_(8:0)/Delta/wtim" hostName="localhost" sensorType="integer" color="0xffff0000"/>
+ </display>
+</WorkSheet>

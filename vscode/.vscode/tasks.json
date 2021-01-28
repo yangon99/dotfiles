@@ -1,0 +1,86 @@
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "Compile C (gcc)",
+                "command": "gcc",
+                "args": [
+                    "${relativeFile}", //这里用了相对路径，是因为在编译后点击错误会出现路径问题，应该是--bug-- feature
+                    "-o",
+                    "/tmp/${fileBasenameNoExtension}.out",
+                    "-g",
+                    "-Wall",
+                    "-static-libgcc",
+                    "-std=c99"
+                ],
+                "type": "shell",
+                "group": {
+                    "kind": "build",
+                    "isDefault": true
+                },
+                "presentation": {
+                    "echo": true,
+                    "reveal": "silent",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": "$gcc"
+            },
+            {
+                "label": "Compile C++ (g++)",
+                "command": "g++",
+                "args": [
+                    "${relativeFile}", //这里用了相对路径，是因为在编译后点击错误会出现路径问题，应该是bug
+                    "-o",
+                    "/tmp/${fileBasenameNoExtension}.out",
+                    "-g",
+                    "-Wall",
+                    "-static-libgcc",
+                    "-std=c++11",
+                    "-lcurl",
+                    "-lyaml-cpp"
+                ],
+                "type": "shell",
+                "group": {
+                    "kind": "build",
+                    "isDefault": true,
+                },
+                "presentation": {
+                    "echo": true,
+                    "reveal": "silent",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": "$gcc"
+            },
+            {
+                "label": "Compile clash_editor",
+                "command": "g++",
+                "args": [
+                    "${relativeFile}",
+                    "-o",
+                    "/tmp/${fileBasenameNoExtension}.out",
+                    "-g",
+                    "-Wall",
+                    "-std=c++17",
+                    "-L/usr/lib",
+                    "-lcurl",
+                    "-lyaml-cpp"
+                ],
+                "type": "shell",
+                "group": {
+                    "kind": "build",
+                    "isDefault": true,
+                },
+                "presentation": {
+                    "echo": true,
+                    "reveal": "silent",
+                    "focus": false,
+                    "panel": "shared"
+                },
+                "problemMatcher": "$gcc"
+            }
+        ]
+    }

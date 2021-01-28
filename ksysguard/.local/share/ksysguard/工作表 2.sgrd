@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE KSysGuardWorkSheet>
+<WorkSheet locked="0" columns="1" interval="0.5" title="温度" rows="3">
+ <host name="localhost" shell="" command="ksysguardd" port="-1"/>
+ <display autoRange="1" rowSpan="1" title="Core_0" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="0" showUnit="0" labels="1" hScale="6" unit="">
+  <beam sensorName="lmsensors/coretemp-isa-0000/Core_0" hostName="localhost" sensorType="float" color="0xff0057ae"/>
+  <beam sensorName="lmsensors/coretemp-isa-0000/Core_1" hostName="localhost" sensorType="float" color="0xffe20800"/>
+  <beam sensorName="lmsensors/coretemp-isa-0000/Core_2" hostName="localhost" sensorType="float" color="0xfff3c300"/>
+  <beam sensorName="lmsensors/coretemp-isa-0000/Core_3" hostName="localhost" sensorType="float" color="0xffff0000"/>
+  <beam sensorName="lmsensors/coretemp-isa-0000/Package_id_0" hostName="localhost" sensorType="float" color="0xff00a900"/>
+ </display>
+ <display autoRange="1" rowSpan="1" title="cpu_fan" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="1" showUnit="0" labels="1" hScale="6" unit="">
+  <beam sensorName="lmsensors/asus-isa-0000/cpu_fan" hostName="localhost" sensorType="float" color="0xff0057ae"/>
+ </display>
+ <display autoRange="1" rowSpan="1" title="时钟频率" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="2" showUnit="0" labels="1" hScale="6" unit="">
+  <beam sensorName="cpu/cpu0/clock" hostName="localhost" sensorType="float" color="0xff0057ae"/>
+  <beam sensorName="cpu/cpu1/clock" hostName="localhost" sensorType="float" color="0xffe20800"/>
+  <beam sensorName="cpu/cpu2/clock" hostName="localhost" sensorType="float" color="0xfff3c300"/>
+  <beam sensorName="cpu/cpu3/clock" hostName="localhost" sensorType="float" color="0xffff0000"/>
+  <beam sensorName="cpu/cpu4/clock" hostName="localhost" sensorType="float" color="0xff00a900"/>
+  <beam sensorName="cpu/cpu5/clock" hostName="localhost" sensorType="float" color="0xff0028a9"/>
+  <beam sensorName="cpu/cpu6/clock" hostName="localhost" sensorType="float" color="0xffa92928"/>
+  <beam sensorName="cpu/cpu7/clock" hostName="localhost" sensorType="float" color="0xff28a929"/>
+ </display>
+</WorkSheet>
