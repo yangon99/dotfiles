@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE KSysGuardWorkSheet>
-<WorkSheet locked="1" columns="2" interval="0.5" title="System Load" rows="3">
- <host name="localhost" shell="" command="ksysguardd" port="-1"/>
- <display autoRange="1" rowSpan="1" title="CPU History" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="0" showUnit="0" labels="1" hScale="6" unit="">
-  <beam regexpSensorName="cpu/cpu.*/TotalLoad" hostName="localhost" sensorType="float" color="0xffff8000,0xffe20800,0xfff3c300,0xffff0000,0xff00a900,0xff0028a9,0xffa92928,0xff28a929"/>
+<WorkSheet interval="0.5" columns="2" locked="1" title="System Load" rows="3">
+ <host shell="" name="localhost" port="-1" command="ksysguardd"/>
+ <display vScroll="0" fontSize="8" showUnit="0" hLines="1" hScale="6" version="1" autoRange="1" labels="1" class="FancyPlotter" columnSpan="1" vDistance="30" title="CPU History" manualRange="0" svgBackground="" unit="" stacked="0" row="0" rowSpan="1" column="0" vLines="0">
+  <beam hostName="localhost" sensorType="float" color="0xffff8000,0xffe20800,0xfff3c300,0xffff0000,0xff00a900,0xff0028a9,0xffa92928,0xff28a929" regexpSensorName="cpu/cpu.*/TotalLoad"/>
  </display>
- <display autoRange="1" rowSpan="1" title="Memory and Swap History" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="1" showUnit="0" labels="1" hScale="6" unit="">
-  <beam sensorName="mem/physical/application" hostName="localhost" sensorType="integer" color="0xffc000c0" summationName="Memory"/>
-  <beam sensorName="mem/swap/used" hostName="localhost" sensorType="integer" color="0xff00c000" summationName="Swap"/>
+ <display vScroll="0" fontSize="8" showUnit="0" hLines="1" hScale="6" version="1" autoRange="1" labels="1" class="FancyPlotter" columnSpan="1" vDistance="30" title="Memory and Swap History" manualRange="0" svgBackground="" unit="" stacked="0" row="1" rowSpan="1" column="0" vLines="0">
+  <beam hostName="localhost" sensorType="integer" summationName="Memory" color="0xffc000c0" sensorName="mem/physical/application"/>
+  <beam hostName="localhost" sensorType="integer" summationName="Swap" color="0xff00c000" sensorName="mem/swap/used"/>
  </display>
- <display autoRange="1" rowSpan="1" title="Network History" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="1" vDistance="30" stacked="0" hLines="1" version="1" row="1" showUnit="0" labels="1" hScale="6" unit="">
-  <beam regexpSensorName="network/interfaces/(?!lo|bridge|usbus|bond).*/receiver/data" hostName="localhost" sensorType="float" color="0xffb3a52d" summationName="Receiving"/>
-  <beam regexpSensorName="network/interfaces/(?!lo|bridge|usbus|bond).*/transmitter/data" hostName="localhost" sensorType="float" color="0xff844798" summationName="Sending"/>
+ <display vScroll="0" fontSize="8" showUnit="0" hLines="1" hScale="6" version="1" autoRange="1" labels="1" class="FancyPlotter" columnSpan="1" vDistance="30" title="Network History" manualRange="0" svgBackground="" unit="" stacked="0" row="1" rowSpan="1" column="1" vLines="0">
+  <beam hostName="localhost" sensorType="float" summationName="Receiving" color="0xffb3a52d" regexpSensorName="network/interfaces/(?!lo|bridge|usbus|bond).*/receiver/data"/>
+  <beam hostName="localhost" sensorType="float" summationName="Sending" color="0xff844798" regexpSensorName="network/interfaces/(?!lo|bridge|usbus|bond).*/transmitter/data"/>
  </display>
- <display autoRange="1" rowSpan="1" title="Core Temperatures" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="0" vDistance="30" stacked="0" hLines="1" version="1" row="2" showUnit="0" labels="1" hScale="6" unit="">
-  <beam regexpSensorName="lmsensors/coretemp-isa-\d+/Core_\d+" hostName="localhost" sensorType="float" color="0xff0057ae,0xffe20800,0xfff3c300,0xffff0000"/>
-  <beam regexpSensorName="lmsensors/coretemp-isa-\d+/Package_id_\d+" hostName="localhost" sensorType="float" color="0xff00ff7f"/>
+ <display vScroll="0" fontSize="8" showUnit="0" hLines="1" hScale="6" version="1" autoRange="1" labels="1" class="FancyPlotter" columnSpan="1" vDistance="30" title="Core Temperatures" manualRange="0" svgBackground="" unit="" stacked="0" row="2" rowSpan="1" column="0" vLines="0">
+  <beam hostName="localhost" sensorType="float" color="0xff0057ae,0xffe20800,0xfff3c300,0xffff0000" regexpSensorName="lmsensors/coretemp-isa-\d+/Core_\d+"/>
+  <beam hostName="localhost" sensorType="float" color="0xff00ff7f" regexpSensorName="lmsensors/coretemp-isa-\d+/Package_id_\d+"/>
  </display>
- <display autoRange="1" rowSpan="1" title="Hard Disk Totals" class="FancyPlotter" manualRange="0" vScroll="1" vLines="1" svgBackground="" columnSpan="1" fontSize="8" column="1" vDistance="30" stacked="0" hLines="1" version="1" row="2" showUnit="0" labels="1" hScale="6" unit="">
-  <beam regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/rblk" hostName="localhost" sensorType="float" color="0xff0057ae" summationName="Reads"/>
-  <beam regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/wblk" hostName="localhost" sensorType="float" color="0xffe20800" summationName="Writes"/>
+ <display vScroll="1" fontSize="8" showUnit="0" hLines="1" hScale="6" version="1" autoRange="1" labels="1" class="FancyPlotter" columnSpan="1" vDistance="30" title="Hard Disk Totals" manualRange="0" svgBackground="" unit="" stacked="0" row="2" rowSpan="1" column="1" vLines="1">
+  <beam hostName="localhost" sensorType="float" summationName="Reads" color="0xff0057ae" regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/rblk"/>
+  <beam hostName="localhost" sensorType="float" summationName="Writes" color="0xffe20800" regexpSensorName="disk/(nvme(\d+|\d+n\d+)|sd[a-z]+|mmcblk\d+)_.*/Rate/wblk"/>
  </display>
- <display autoRange="1" rowSpan="1" title="Clock Frequency" class="FancyPlotter" manualRange="0" vScroll="0" vLines="0" svgBackground="" columnSpan="1" fontSize="8" column="1" vDistance="30" stacked="0" hLines="1" version="1" row="0" showUnit="0" labels="1" hScale="6" unit="">
-  <beam sensorName="cpu/cpu0/clock" hostName="localhost" sensorType="float" color="0xff5500ff"/>
-  <beam sensorName="cpu/cpu1/clock" hostName="localhost" sensorType="float" color="0xffff007f"/>
-  <beam sensorName="cpu/cpu2/clock" hostName="localhost" sensorType="float" color="0xff555500"/>
-  <beam sensorName="cpu/cpu3/clock" hostName="localhost" sensorType="float" color="0xffff5500"/>
-  <beam sensorName="cpu/cpu4/clock" hostName="localhost" sensorType="float" color="0xffaaaa7f"/>
-  <beam sensorName="cpu/cpu5/clock" hostName="localhost" sensorType="float" color="0xff0057ae"/>
-  <beam sensorName="cpu/cpu6/clock" hostName="localhost" sensorType="float" color="0xffaaaaff"/>
-  <beam sensorName="cpu/cpu7/clock" hostName="localhost" sensorType="float" color="0xff00ff7f"/>
+ <display vScroll="0" fontSize="8" showUnit="0" hLines="1" hScale="6" version="1" autoRange="1" labels="1" class="FancyPlotter" columnSpan="1" vDistance="30" title="Clock Frequency" manualRange="0" svgBackground="" unit="" stacked="0" row="0" rowSpan="1" column="1" vLines="0">
+  <beam hostName="localhost" sensorType="float" color="0xff5500ff" sensorName="cpu/cpu0/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xffff007f" sensorName="cpu/cpu1/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xff555500" sensorName="cpu/cpu2/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xffff5500" sensorName="cpu/cpu3/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xffaaaa7f" sensorName="cpu/cpu4/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xff0057ae" sensorName="cpu/cpu5/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xffaaaaff" sensorName="cpu/cpu6/clock"/>
+  <beam hostName="localhost" sensorType="float" color="0xff00ff7f" sensorName="cpu/cpu7/clock"/>
  </display>
 </WorkSheet>

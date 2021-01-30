@@ -38,9 +38,7 @@
                     "-g",
                     "-Wall",
                     "-static-libgcc",
-                    "-std=c++11",
-                    "-lcurl",
-                    "-lyaml-cpp"
+                    "-std=c++11"
                 ],
                 "type": "shell",
                 "group": {
