@@ -1,5 +1,13 @@
-import subprocess
+def send_lrc_song(curr_sentence):
+    with open("/tmp/fuo_lrc", "w") as fp:
+        if curr_sentence is not None and curr_sentence != "":
+            print(curr_sentence, file=fp)
+        else:
+            print("……", file=fp)
+        
+when('app.live_lyric.sentence_changed', send_lrc_song)
+
+#import subprocess
+#ubprocess.Popen(['osdlyrics'])
 
 config.THEME = 'auto'
-
-subprocess.Popen(['osdlyrics'])
