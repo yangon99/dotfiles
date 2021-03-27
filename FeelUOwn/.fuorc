@@ -1,12 +1,24 @@
+#import dbus
+from dbus import SessionBus
+
+#
+def diy_bar_show(curr_sentence):
+    diy_bar = SessionBus().get_object('org.kde.plasma.doityourselfbar', '/id_1').get_dbus_method('pass')
+    if curr_sentence is not None and curr_sentence != "":
+        diy_bar('| A | %s |||' % (curr_sentence))
+    else:
+        diy_bar('| A | …… |||')
+
+when('app.live_lyric.sentence_changed', diy_bar_show)
+
 def send_lrc_song(curr_sentence):
     with open("/tmp/fuo_lrc", "w") as fp:
         if curr_sentence is not None and curr_sentence != "":
             print(curr_sentence, file=fp)
         else:
             print("……", file=fp)
-        
-when('app.live_lyric.sentence_changed', send_lrc_song)
 
+#when('app.live_lyric.sentence_changed', send_lrc_song)
 #import subprocess
 #ubprocess.Popen(['osdlyrics'])
 

@@ -1,6 +1,8 @@
 [Appearance]
+AntiAliasFonts=true
+BoldIntense=true
 ColorScheme=Breeze
-Font=Fira Code SemiBold,11,-1,5,63,0,0,0,0,0,Regular
+Font=Fira Mono,12,-1,5,50,0,0,0,0,0
 UseFontLineChararacters=true
 
 [General]

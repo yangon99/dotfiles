@@ -101,8 +101,8 @@ RandomHueRange=360
 RandomSaturationRange=100
 
 [General]
-Blur=true
+Blur=false
 ColorRandomization=false
 Description=微风
-Opacity=0.82
+Opacity=0.91
 Wallpaper=
