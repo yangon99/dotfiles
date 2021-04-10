@@ -1,11 +1,19 @@
 {
+    "env": {
+        "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/include",
+            "${workspaceFolder}/**",
+            "/usr/lib/gcc/x86_64-pc-linux-gnu/*/*",
+            "/usr/include/c++/*"
+        ],
+        "myCompilerPath": "/usr/local/bin/gcc"
+      },
     "configurations": [
         {
             "name": "Linux",
             "includePath": [
                 "${workspaceFolder}/**",
-                "/usr/lib/gcc/x86_64-pc-linux-gnu/*/*",
-                "/usr/include/c++/*"
+                "/usr/lib/gcc/x86_64-pc-linux-gnu/**",
+                "/usr/include/c++/**"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
@@ -15,19 +23,6 @@
             "compilerArgs": [
                 "-Wall"
             ]
-        },
-        {
-            "name": "C++",
-            "includePath": [
-                "${workspaceFolder}/**",
-                "/usr/lib/gcc/x86_64-pc-linux-gnu/*/*/",
-                "/usr/include/c++/*/"
-            ],
-            "defines": [],
-            "compilerPath": "/usr/bin/gcc",
-            "cStandard": "c99",
-            "cppStandard": "c++17",
-            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4

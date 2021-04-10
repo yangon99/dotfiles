@@ -5,7 +5,7 @@
         "tasks": [
             {
                 "label": "Compile C (gcc)",
-                "command": "gcc",
+                "command": "gcc-",
                 "args": [
                     "${relativeFile}", //这里用了相对路径，是因为在编译后点击错误会出现路径问题，应该是--bug-- feature
                     "-o",
