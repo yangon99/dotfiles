@@ -8,7 +8,7 @@
     "cgroup_proxy": [],
     "enable_gateway": false,
     "enable_dns": false,
-    "enable_udp": true,
+    "enable_udp": false,
     "enable_tcp": true,
     "enable_ipv4": true,
     "enable_ipv6": false,
