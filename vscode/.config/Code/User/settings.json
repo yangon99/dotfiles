@@ -1,0 +1,67 @@
+{
+    "editor.fontFamily": " 'Fira Code SemiBold'",
+    "editor.fontLigatures": true,
+    "C_Cpp.clang_format_sortIncludes": true,
+    "C_Cpp.clang_format_fallbackStyle": "{     \"BasedOnStyle\": \"LLVM\",     \"PointerAlignment\": \"Right\",     \"IndentWidth\": 4,     \"MaxEmptyLinesToKeep\": 1,     \"ObjCSpaceAfterProperty\": true,     \"ObjCBlockIndentWidth\": 4,     \"AllowShortFunctionsOnASingleLine\": true,     \"AllowShortIfStatementsOnASingleLine\": true,     \"AlignTrailingComments\": true,     \"SpacesInSquareBrackets\": false,     \"SpacesInParentheses\": false,     \"AlignConsecutiveDeclarations\": false,     \"AlignConsecutiveAssignments\": true,     \"SpaceBeforeAssignmentOperators\": true,     \"SpacesInContainerLiterals\": true,     \"IndentWrappedFunctionNames\": true,     \"KeepEmptyLinesAtTheStartOfBlocks\": true,     \"BreakConstructorInitializersBeforeComma\": false,     \"AllowAllParametersOfDeclarationOnNextLine\": true,     \"SpaceAfterCStyleCast\": false,     \"TabWidth\": 4,     \"ColumnLimit\": 0,     \"UseTab\": \"Never\" }",
+    "C_Cpp.loggingLevel": "Information",
+    "html.format.wrapAttributes": "preserve",
+    "html.format.wrapLineLength": 0,
+    "workbench.activityBar.visible": true,
+    "workbench.sideBar.location": "left",
+    "editor.formatOnType": true,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh",
+    "http.proxy": "http://127.0.0.1:7890",
+    "python.linting.flake8Path": "/usr/bin/flake8",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "python.jediEnabled": false,
+    "python.venvFolders": [
+        ".local/venv"
+    ],
+    "python.venvPath": "~/.local/venv",
+    "python.linting.pylintEnabled": false,
+    "git.showPushSuccessNotification": true,
+    "git.confirmSync": false,
+    "latex-workshop.view.pdf.viewer": "browser",
+    "python.languageServer": "Jedi",
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.colorTheme": "Visual Studio Dark",
+    "window.titleBarStyle": "custom",
+    "files.associations": {
+        "*.html": "django-html",
+        "*.toml": "ini",
+        "*.install": "shellscript"
+    },
+    "python.linting.flake8Enabled": true,
+    "clang-format.language.c.style": "{     \"BasedOnStyle\": \"LLVM\",     \"PointerAlignment\": \"Right\",     \"IndentWidth\": 4,     \"MaxEmptyLinesToKeep\": 1,     \"ObjCSpaceAfterProperty\": true,     \"ObjCBlockIndentWidth\": 4,     \"AllowShortFunctionsOnASingleLine\": true,     \"AllowShortIfStatementsOnASingleLine\": true,     \"AlignTrailingComments\": true,     \"SpacesInSquareBrackets\": false,     \"SpacesInParentheses\": false,     \"AlignConsecutiveDeclarations\": false,     \"AlignConsecutiveAssignments\": true,     \"SpaceBeforeAssignmentOperators\": true,     \"SpacesInContainerLiterals\": true,     \"IndentWrappedFunctionNames\": true,     \"KeepEmptyLinesAtTheStartOfBlocks\": true,     \"BreakConstructorInitializersBeforeComma\": false,     \"AllowAllParametersOfDeclarationOnNextLine\": true,     \"SpaceAfterCStyleCast\": false,     \"TabWidth\": 4,     \"ColumnLimit\": 0,     \"UseTab\": \"Never\" }",
+    "clang-format.language.cpp.style": "{     \"BasedOnStyle\": \"LLVM\",     \"PointerAlignment\": \"Right\",     \"IndentWidth\": 4,     \"MaxEmptyLinesToKeep\": 1,     \"ObjCSpaceAfterProperty\": true,     \"ObjCBlockIndentWidth\": 4,     \"AllowShortFunctionsOnASingleLine\": true,     \"AllowShortIfStatementsOnASingleLine\": true,     \"AlignTrailingComments\": true,     \"SpacesInSquareBrackets\": false,     \"SpacesInParentheses\": false,     \"AlignConsecutiveDeclarations\": false,     \"AlignConsecutiveAssignments\": true,     \"SpaceBeforeAssignmentOperators\": true,     \"SpacesInContainerLiterals\": true,     \"IndentWrappedFunctionNames\": true,     \"KeepEmptyLinesAtTheStartOfBlocks\": true,     \"BreakConstructorInitializersBeforeComma\": false,     \"AllowAllParametersOfDeclarationOnNextLine\": true,     \"SpaceAfterCStyleCast\": false,     \"TabWidth\": 4,     \"ColumnLimit\": 0,     \"UseTab\": \"Never\" }",
+    "[cpp]": {
+        "editor.defaultFormatter": "ms-vscode.cpptools"
+    },
+    "C_Cpp.default.includePath": ["${workspaceFolder}", "${workspaceFolder}/include",
+        "${workspaceFolder}/**",
+        "/usr/lib/gcc/x86_64-pc-linux-gnu/*/*",
+        "/usr/include/c++/*"
+    ],
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter.notebook.ipynb"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "editor.renderWhitespace": "all",
+    "editor.renderControlCharacters": true,
+    "redhat.telemetry.enabled": true,
+    "[javascript]": {
+        "editor.inlayHints.enabled": true,
+        "editor.defaultFormatter": "SimonSiefke.prettier-vscode"
+    },
+    "editor.inlineSuggest.enabled": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "javascript": true,
+        "ssh_config": false
+    },
+    "window.zoomLevel": 0.6
+}

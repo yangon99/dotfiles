@@ -93,7 +93,7 @@
     },
     "C_Cpp.dimInactiveRegions": true,
     "python.venvPath": "~/.local/venv",
-    "python.pythonPath": "/usr/bin/python",
+    "python.pythonPath": "/home/yangon/.conda/envs/venv/bin/python",
     "python.linting.flake8Path": "/usr/bin/flake8",
     "python.linting.flake8Args": [
         "--verbose"
