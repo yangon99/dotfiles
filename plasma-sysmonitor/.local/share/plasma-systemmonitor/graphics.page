@@ -1,0 +1,168 @@
+[Face-94549915155056][Appearance]
+Title=Video Memory Usage
+Title[nl]=Videogeheugengebruik
+Title[pl]=Wykorzystanie pamięci video
+Title[pt_BR]=Uso da Memória de Video
+Title[ru]=Использование видеопамяти
+chartFace=org.kde.ksysguard.piechart
+
+[Face-94549915155056][SensorColors]
+gpu/gpu0/usedVram=61,174,233
+
+[Face-94549915155056][Sensors]
+highPrioritySensorIds=["gpu/gpu0/usedVram"]
+totalSensors=["gpu/gpu0/usedVram","gpu/gpu0/totalVram"]
+
+[Face-94549915155056][org.kde.ksysguard.piechart][General]
+showLegend=false
+
+[Face-94549958436304][Appearance]
+Title=GPU Temperature
+Title[nl]=GPU-temperatuur
+Title[pl]=Temperatura GPU
+Title[pt_BR]=Temperatura da GPU
+Title[ru]=Температура GPU
+chartFace=org.kde.ksysguard.linechart
+
+[Face-94549958436304][SensorColors]
+gpu/gpu0/temperature=61,174,233
+
+[Face-94549958436304][Sensors]
+highPrioritySensorIds=["gpu/gpu0/temperature"]
+totalSensors=["gpu/gpu0/temperature"]
+
+[Face-94549958436304][org.kde.ksysguard.piechart][General]
+showLegend=false
+
+[Face-94549965033408][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+
+[Face-94549965033408][SensorColors]
+gpu/gpu0/usage=61,174,233
+
+[Face-94549965033408][Sensors]
+highPrioritySensorIds=["gpu/gpu0/usage"]
+
+[Face-94549965033408][org.kde.ksysguard.linechart][General]
+lineChartFillOpacity=100
+showLegend=false
+
+[Face-94549969077840][Appearance]
+Title=Overview
+Title[nl]=Overzicht
+Title[pl]=Przegląd
+Title[pt_BR]=Visão Geral
+Title[ru]=Обзор
+chartFace=org.kde.ksysguard.textonly
+
+[Face-94549969077840][Sensors]
+lowPrioritySensorIds=["gpu/gpu0/name","gpu/gpu0/usage","gpu/gpu0/coreFrequency","gpu/gpu0/usedVram","gpu/gpu0/temperature"]
+totalSensors=[]
+
+[Face-94549998694368][Appearance]
+chartFace=org.kde.ksysguard.linechart
+showTitle=false
+
+[Face-94549998694368][SensorColors]
+gpu/gpu0/coreFrequency=61,174,233
+gpu/gpu0/memoryFrequency=233,120,61
+
+[Face-94549998694368][Sensors]
+highPrioritySensorIds=["gpu/gpu0/coreFrequency","gpu/gpu0/memoryFrequency"]
+
+[Face-94549998694368][org.kde.ksysguard.linechart][General]
+lineChartFillOpacity=100
+
+[page]
+Title=Graphics
+Title[nl]=Grafisch
+Title[pl]=Grafika
+Title[pt_BR]=Gráficos
+Title[ru]=Графика
+actionsFace=
+icon=monitor
+margin=2
+
+[page][row-0]
+Title=
+isTitle=false
+name=row-0
+
+[page][row-0][column-0]
+name=column-0
+noMargins=
+showBackground=true
+
+[page][row-0][column-0][section-0]
+face=Face-94549969077840
+isSeparator=false
+name=section-0
+
+[page][row-0][column-1]
+name=column-1
+noMargins=
+showBackground=true
+
+[page][row-0][column-1][section-0]
+face=Face-94549915155056
+isSeparator=false
+name=section-0
+
+[page][row-0][column-2]
+name=column-2
+noMargins=
+showBackground=true
+
+[page][row-0][column-2][section-0]
+face=Face-94549958436304
+isSeparator=false
+name=section-0
+
+[page][row-1]
+Title=GPU Usage
+Title[nl]=GPU-gebruik
+Title[pl]=Wykorzystanie GPU
+Title[pt_BR]=Uso da GPU
+Title[ru]=Использование GPU
+isTitle=true
+name=row-1
+
+[page][row-2]
+Title=
+isTitle=false
+name=row-2
+
+[page][row-2][column-0]
+name=column-0
+noMargins=
+showBackground=true
+
+[page][row-2][column-0][section-0]
+face=Face-94549965033408
+isSeparator=false
+name=section-0
+
+[page][row-3]
+Title=GPU Frequencies
+Title[nl]=GPU-frequenties
+Title[pl]=Częstotliwości GPU
+Title[pt_BR]=Frequências da GPU
+Title[ru]=Частоты GPU
+isTitle=true
+name=row-3
+
+[page][row-4]
+Title=
+isTitle=false
+name=row-4
+
+[page][row-4][column-0]
+name=column-0
+noMargins=
+showBackground=true
+
+[page][row-4][column-0][section-0]
+face=Face-94549998694368
+isSeparator=false
+name=section-0
