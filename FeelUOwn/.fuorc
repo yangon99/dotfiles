@@ -1,15 +1,28 @@
 #import dbus
-from dbus import SessionBus
+#from dbus import SessionBus
+import subprocess
 
-#
 def diy_bar_show(curr_sentence):
-    diy_bar = SessionBus().get_object('org.kde.plasma.doityourselfbar', '/id_1').get_dbus_method('pass')
+    print(curr_sentence)
+
+    try:
+        diy_bar = SessionBus().get_object('org.kde.plasma.doityourselfbar', '/id_1').get_dbus_method('pass')
+    except dbus.exceptions.DBusException:
+        print("啧")
     if curr_sentence is not None and curr_sentence != "":
-        diy_bar('| A | %s |||' % (curr_sentence))
+        diy_bar('|A|%s|||' % (curr_sentence))
     else:
         diy_bar('| A | …… |||')
 
-when('app.live_lyric.sentence_changed', diy_bar_show)
+def subprocess_diybar_show(curr_sentence):
+    if curr_sentence is not None and curr_sentence != "":
+        curr_sentence = '|A|%s|||' % (curr_sentence)
+    else:
+        curr_sentence = '| A | …… |||'
+    subprocess.run(['qdbus', 'org.kde.plasma.doityourselfbar', '/id_1', 'pass', curr_sentence])
+
+when('app.live_lyric.sentence_changed', subprocess_diybar_show)
+
 
 def send_lrc_song(curr_sentence):
     with open("/tmp/fuo_lrc", "w") as fp:
@@ -22,4 +35,4 @@ def send_lrc_song(curr_sentence):
 #import subprocess
 #ubprocess.Popen(['osdlyrics'])
 
-config.THEME = 'auto'
+#config.THEME = 'auto'
