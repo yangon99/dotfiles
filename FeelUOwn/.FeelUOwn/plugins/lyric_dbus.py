@@ -4,7 +4,7 @@ from feeluown.consts import SONG_DIR as DEFAULT_DOWNLOAD_DIR
 from feeluown.fuoexec.signal_manager import signal_mgr
 
 """
-监听 app.live_lyric.sentence_changed 事件，并使用 app 的 dbus 服务发送dbus信息
+监听 app.live_lyric.sentence_changed 事件，发送dbus信息
 """
 
 
@@ -19,15 +19,17 @@ diy_bar = None
 
 def send_dbus_msg(curr_sentence):
     global diy_bar
-    logger.info('send dbus message: {}'.format(curr_sentence))
     if not diy_bar:
         logger.warning('try to get diy_bar object.')
         diy_bar = SessionBus().get_object('org.kde.plasma.doityourselfbar', '/id_1').get_dbus_method('pass')
         return
+    msg_str = ''
     if curr_sentence is not None and curr_sentence != "":
-        diy_bar('|A|%s|||' % (curr_sentence))
+        msg_str = '|A|%s|||' % (curr_sentence)
     else:
-        diy_bar('| A | …… |||')
+        msg_str = '| A | …… |||'
+    logger.info('send dbus message: {}'.format(msg_str))
+    diy_bar(msg_str)
 
 
 def enable(app):
