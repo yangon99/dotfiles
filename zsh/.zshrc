@@ -98,14 +98,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias clashreboot="systemctl restart clash-yangon --user"
+alias clashreboot="systemctl restart clash@yangon;systemctl restart cgproxy"
+
 #alias pyc="proxychains"
-alias jpven="source ~/.local/venv/jupyter/bin/activate"
+#alias jpven="source ~/.local/venv/jupyter/bin/activate"
 alias Syu="sudo pacman  -Syu"
-alias nvrun="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
-alias hijackdns="sudo /opt/clash-yangon/hijack-dns"
-alias git="cgproxy git"
+#alias nvrun="__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia"
+#alias hijackdns="sudo /opt/clash-yangon/hijack-dns"
+#alias git="cgproxy git"
 alias ip="ip -c=auto"
+export virtdstart="systemctl start smb;systemctl start libvirtd virtlogd"
+alias vmstart="${virtdstart};virsh -c qemu:///system start win10;spicy & disown;"
 #alias cgproxy="/opt/clash-yangon/hijack-dns;cgproxy"
 
 source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -132,3 +135,7 @@ function setup_conda(){
 }
 # <<< conda initialize <<<
 
+PATH="$HOME/.local/bin:$PATH"
+source /usr/share/nvm/init-nvm.sh
+source /etc/profile.d/pico-sdk.sh
+export NVM_DIR=$HOME/.local/lib/nvm
