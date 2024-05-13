@@ -1,6 +1,7 @@
 #import dbus
 #from dbus import SessionBus
 import subprocess
+import os
 
 def diy_bar_show(curr_sentence):
     print(curr_sentence)
@@ -21,7 +22,7 @@ def subprocess_diybar_show(curr_sentence):
         curr_sentence = '| A | …… |||'
     subprocess.run(['qdbus', 'org.kde.plasma.doityourselfbar', '/id_1', 'pass', curr_sentence])
 
-when('app.live_lyric.sentence_changed', subprocess_diybar_show)
+# when('app.live_lyric.sentence_changed', subprocess_diybar_show)
 
 
 def send_lrc_song(curr_sentence):
@@ -36,3 +37,12 @@ def send_lrc_song(curr_sentence):
 #ubprocess.Popen(['osdlyrics'])
 
 #config.THEME = 'auto'
+
+def load_local_music(plugin):
+    if plugin.name == 'fuo_local':
+        music_path = os.path.expanduser('~') + '/Music/Music'
+        config.fuo_local.MUSIC_FOLDERS = [music_path + '/' + folder for folder in os.listdir(music_path) if ~os.path.isfile(folder)]
+        config.fuo_local.MUSIC_FOLDERS.append(music_path)
+        config.fuo_local.MUSIC_FORMATS = ['mp3', 'ogg', 'wma', 'm4a', 'm4v', 'mp4', 'flac']
+
+when('app.plugin_mgr.about_to_enable', load_local_music, use_symbol=True, aioqueue=False)
